@@ -22,7 +22,7 @@ function Message(props: MessageDataType) {
         <div className="message-username">{props.name}</div>
         <div className="content-time-container">
           <div className="message-content">{props.message}</div>
-          <div className="message-time">{props.time}</div>
+          <div className="message-time"><span>{props.time}</span></div>
         </div>
       </div>
     </div>

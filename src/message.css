@@ -43,7 +43,6 @@
 
 .content-time-container {
   display: flex;
-  /* align-items: flex-end; */
 }
 
 .message-content {
@@ -55,4 +54,9 @@
   padding-top: 10px;
   padding-left: 8px;
   font-size: 1.1rem;
+  display: flex;
+}
+
+.message-time span {
+  align-self: flex-end;
 }
