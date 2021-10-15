@@ -8,7 +8,7 @@ type MessageDataType = {
   time: string;
 };
 
-function Message(props: MessageDataType) {
+const Message: React.FC<MessageDataType> = (props) => {
   return (
     <div className="message">
       <div className="avatar-containter">
