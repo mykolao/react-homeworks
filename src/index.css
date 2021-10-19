@@ -8,6 +8,12 @@ body {
   background-color: rgb(14, 22, 33);
 }
 
+.section_title {
+  color: rgb(245, 245, 245);
+  margin: 0;
+  padding: 0 12px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

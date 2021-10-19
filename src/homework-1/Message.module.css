@@ -8,7 +8,7 @@ hr {
   display: flex;
 }
 
-.message-body {
+.message_body {
   background-color: rgb(24, 37, 51);
   padding: 4px 12px;
   border-top-left-radius: 8px;
@@ -16,17 +16,17 @@ hr {
   border-bottom-right-radius: 8px;
 }
 
-.avatar-containter {
+.avatar_containter {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.avatar-bg-low {
+.avatar_bg_low {
   background-color: rgb(24, 37, 51);
 }
 
-.avatar-bg-high {
+.avatar_bg_high {
   height: 50px;
   padding-right: 12px;
   background-color: rgb(14, 22, 33);
@@ -39,20 +39,20 @@ hr {
   border-radius: 48%;
 }
 
-.message-username {
+.message_username {
   font-weight: 500;
   color: rgb(180, 139, 242);
 }
 
-.content-time-container {
+.content_time_container {
   display: flex;
 }
 
-.message-content {
+.message_content {
   color: rgb(245, 245, 245);
 }
 
-.message-time {
+.message_time {
   color: rgb(109, 127, 143);
   padding-top: 10px;
   padding-left: 8px;
@@ -60,6 +60,6 @@ hr {
   display: flex;
 }
 
-.message-time span {
+.message_time span {
   align-self: flex-end;
 }
