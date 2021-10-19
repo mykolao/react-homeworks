@@ -8,6 +8,10 @@ body {
   background-color: rgb(14, 22, 33);
 }
 
+.homework {
+  margin-top: 20px;
+}
+
 .section_title {
   color: rgb(245, 245, 245);
   margin: 0;
