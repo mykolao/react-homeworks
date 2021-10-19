@@ -1,3 +1,15 @@
-.someClass {
+.affairs {
+  background-color: var(--fg-color);
+  margin: 12px;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 8px 12px;
+  /* max-width: 480px; */
+}
 
+.affair {
+  /* width: fit-content; */
+  color: var(--color-light);
+  display: flex;
+  margin: 8px 0px;
 }

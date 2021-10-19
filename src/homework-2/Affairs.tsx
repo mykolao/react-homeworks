@@ -1,6 +1,7 @@
 import React from "react";
 import Affair from "./Affair";
 import { AffairType, AffairsType } from "./HW2";
+import css from "./Affairs.module.css";
 
 type AffairsPropsType = {
   // need to fix any
@@ -24,7 +25,7 @@ function Affairs(props: AffairsPropsType) {
   const setLow = () => {};
 
   return (
-    <div className="affairs">
+    <div className={css.affairs}>
       {mappedAffairs}
 
       <button onClick={setAll}>All</button>

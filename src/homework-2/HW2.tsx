@@ -58,9 +58,6 @@ function HW2() {
         deleteAffairCallback={deleteAffairCallback}
       />
       <hr />
-      {/*для личного творчества, могу проверить*/}
-      {/*<AlternativeAffairs/>*/}
-      <hr />
     </div>
   );
 }
