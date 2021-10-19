@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import Affairs from "./Affairs";
 
 // types
-export type AffairPriorityType = any; // need to fix any
-export type AffairType = any; // need to fix any
+export type AffairPriorityType = "low" | "middle" | "high";
+
+export type AffairType = {
+  _id: number;
+  name: string;
+  priority: AffairPriorityType;
+};
+
+export type AffairsType = Array<AffairType>;
+
 export type FilterType = "all" | AffairPriorityType;
 
 // constants
-const defaultAffairs: any = [
-  // need to fix any
+const defaultAffairs: AffairsType = [
   { _id: 1, name: "React", priority: "high" },
   { _id: 2, name: "anime", priority: "low" },
   { _id: 3, name: "games", priority: "low" },
@@ -25,18 +32,21 @@ export const filterAffairs = (
   if (filter === "all") return affairs;
   else return; // need to fix
 };
-export const deleteAffair = (affairs: any, _id: any): any => {
-  // need to fix any
-  return; // need to fix
-};
+
+export const deleteAffair = (
+  affairs: AffairsType,
+  _id: number
+): AffairsType =>
+  affairs.filter((affair) => affair._id !== _id);
 
 function HW2() {
-  const [affairs, setAffairs] = useState<any>(defaultAffairs); // need to fix any
+  const [affairs, setAffairs] = useState<AffairsType>(defaultAffairs); // need to fix any
   const [filter, setFilter] = useState<FilterType>("all");
 
   const filteredAffairs = filterAffairs(affairs, filter);
-  const deleteAffairCallback = (_id: any) =>
-    setAffairs(deleteAffair(affairs, _id)); // need to fix any
+
+  const deleteAffairCallback = (_id: number) =>
+    setAffairs(deleteAffair(affairs, _id));
 
   return (
     <div className="homework">
