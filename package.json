@@ -2,7 +2,7 @@
   "name": "homework-1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mykolao.github.io/homework-1",
+  "homepage": "https://mykolao.github.io/react-homeworks",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
