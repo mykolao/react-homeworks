@@ -27,19 +27,10 @@ const defaultAffairs: AffairsType = [
 export const filterAffairs = (a: AffairsType, f: FilterType) =>
   f === "all" ? a : a.filter((a) => a.priority === f);
 
-// export const filterAffairs = (
-//   affairs: AffairsType,
-//   filter: FilterType
-// ): AffairsType => {
-//   if (filter === "all") return affairs;
-//   else return affairs.filter((a) => a.priority === filter);
-// };
-
 export const deleteAffair = (
-  affairs: AffairsType,
-  _id: number
-): AffairsType =>
-  affairs.filter((affair) => affair._id !== _id);
+  a: AffairsType,
+  i: number
+): AffairsType => a.filter((a) => a._id !== i);
 
 // Component
 function HW2() {
