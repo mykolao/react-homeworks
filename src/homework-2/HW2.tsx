@@ -25,12 +25,11 @@ const defaultAffairs: AffairsType = [
 
 // pure helper functions
 export const filterAffairs = (
-  affairs: any,
-  filter: any
-): any => {
-  // need to fix any
+  affairs: AffairsType,
+  filter: FilterType
+): AffairsType => {
   if (filter === "all") return affairs;
-  else return; // need to fix
+  else return affairs.filter((a) => a.priority === filter);
 };
 
 export const deleteAffair = (
@@ -39,8 +38,10 @@ export const deleteAffair = (
 ): AffairsType =>
   affairs.filter((affair) => affair._id !== _id);
 
+  // Component
 function HW2() {
-  const [affairs, setAffairs] = useState<AffairsType>(defaultAffairs); // need to fix any
+  const [affairs, setAffairs] =
+    useState<AffairsType>(defaultAffairs); // need to fix any
   const [filter, setFilter] = useState<FilterType>("all");
 
   const filteredAffairs = filterAffairs(affairs, filter);
@@ -51,7 +52,6 @@ function HW2() {
   return (
     <div className="homework">
       <h2 className="section_title">Homework 2</h2>
-      {/*should work (должно работать)*/}
       <Affairs
         data={filteredAffairs}
         setFilter={setFilter}

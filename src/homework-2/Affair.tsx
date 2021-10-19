@@ -4,7 +4,7 @@ import css from "./Affairs.module.css";
 
 type AffairPropsType = {
   affair: AffairType;
-  deleteAffairCallback: any; // need to fix any
+  deleteAffairCallback: (_id: number) => void;
 };
 
 function Affair(props: AffairPropsType) {
