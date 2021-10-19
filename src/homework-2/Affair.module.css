@@ -1,0 +1,36 @@
+.affair {
+  color: var(--color-light);
+  grid-template-columns: 4fr 2fr 1fr;
+  display: grid;
+  margin: 8px 0px;
+}
+
+.priority {
+  font-style: italic;
+  font-weight: 500;
+  padding-left: 4px;
+}
+
+.high {
+  color: var(--color-red);
+}
+
+.middle {
+  color: var(--color-violet);
+}
+
+.low {
+  color: var(--color-blue);
+}
+
+.button {
+  border: none;
+  background-color: var(--fg-color);
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}

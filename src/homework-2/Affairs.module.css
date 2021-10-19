@@ -4,39 +4,25 @@
   border-radius: 8px;
   width: fit-content;
   padding: 8px 12px;
-  /* max-width: 480px; */
-}
-
-.affair {
-  /* width: fit-content; */
-  color: var(--color-light);
-  display: flex;
-  margin: 8px 0px;
-}
-
-.priority {
-  font-style: italic;
-  font-weight: 500;
-}
-
-.high {
-  color: var(--color-red);
-}
-
-.middle {
-  color: var(--color-violet);
-}
-
-.low {
-  color: var(--color-blue);
 }
 
 .button {
-  /* text-decoration: none; */
+  padding: 1px 4px;
+  font-size: 1.15rem;
   border: none;
   background-color: var(--fg-color);
   color: var(--color-dark);
   cursor: pointer;
+}
+
+.buttons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.button:not(:first-child).button:not(:last-child) {
+  margin: 0px 4px;
 }
 
 .button:hover {
