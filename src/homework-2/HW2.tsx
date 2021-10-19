@@ -24,13 +24,16 @@ const defaultAffairs: AffairsType = [
 ];
 
 // pure helper functions
-export const filterAffairs = (
-  affairs: AffairsType,
-  filter: FilterType
-): AffairsType => {
-  if (filter === "all") return affairs;
-  else return affairs.filter((a) => a.priority === filter);
-};
+export const filterAffairs = (a: AffairsType, f: FilterType) =>
+  f === "all" ? a : a.filter((a) => a.priority === f);
+
+// export const filterAffairs = (
+//   affairs: AffairsType,
+//   filter: FilterType
+// ): AffairsType => {
+//   if (filter === "all") return affairs;
+//   else return affairs.filter((a) => a.priority === filter);
+// };
 
 export const deleteAffair = (
   affairs: AffairsType,
@@ -38,7 +41,7 @@ export const deleteAffair = (
 ): AffairsType =>
   affairs.filter((affair) => affair._id !== _id);
 
-  // Component
+// Component
 function HW2() {
   const [affairs, setAffairs] =
     useState<AffairsType>(defaultAffairs); // need to fix any
