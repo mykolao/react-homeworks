@@ -4,6 +4,7 @@
   font-size: 1.1rem;
   background-color: var(--fg-color);
   color: var(--color-light);
+  margin-bottom: 12px;
 }
 
 .superInput:focus {
