@@ -1,7 +1,8 @@
 .checkbox {
-
+  margin-bottom: 8px;
 }
 
 .spanClassName {
-
+  color: var(--color-light);
+  padding: 3px;
 }
