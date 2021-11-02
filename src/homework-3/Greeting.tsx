@@ -1,11 +1,13 @@
 import React, { ChangeEvent } from "react";
+import SuperInputText from "../homework-4/common/c1-SuperInputText/SuperInputText";
+import SuperButton from "../homework-4/common/c2-SuperButton/SuperButton";
 import s from "./Greeting.module.css";
 
 type GreetingPropsType = {
   name: string;
   setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void;
   addUser: () => void;
-  error: boolean;
+  error: string;
   totalUsers: number;
 };
 
@@ -16,12 +18,28 @@ const Greeting: React.FC<GreetingPropsType> = ({
   error,
   totalUsers,
 }) => {
-  const inputClass = error ? s.error : s.noerror;
-  const errorMsg = error ? "Name is required." : "";
+  // const inputClass = error ? s.error : s.noerror;
+  // const errorMsg = error ? "Name is required." : "";
 
   return (
     <div className={s.greeting}>
-      <input
+      <div className={s.input}>
+        <SuperInputText
+          value={name}
+          onEnter={addUser}
+          onChange={setNameCallback}
+          error={error}
+        ></SuperInputText>
+      </div>
+      <SuperButton
+        disabled={error ? true : false}
+        onClick={addUser}
+        className={s.button}
+      >
+        Add
+      </SuperButton>
+      <span className={s.counter}>{totalUsers}</span>
+      {/* <input
         value={name}
         onChange={setNameCallback}
         className={`${s.input} ${inputClass}`}
@@ -32,7 +50,7 @@ const Greeting: React.FC<GreetingPropsType> = ({
         Add
       </button>
       <span className={s.counter}>{totalUsers}</span>
-      <i className={s.error_message}>{errorMsg}</i>
+      <i className={s.error_message}>{errorMsg}</i> */}
     </div>
   );
 };

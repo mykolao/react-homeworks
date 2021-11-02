@@ -10,7 +10,7 @@ type GreetingContainerPropsType = {
 const GreetingContainer: React.FC<GreetingContainerPropsType> =
   ({ users, addUserCallback }) => {
     const [name, setName] = useState<string>("");
-    const [error, setError] = useState<boolean>(true);
+    const [error, setError] = useState<string>("Name is required.");
 
     const setNameCallback = (
       e: ChangeEvent<HTMLInputElement>
@@ -19,10 +19,10 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> =
 
       if (val.length) {
         setName(val);
-        setError(false);
+        setError("");
       } else {
         setName("");
-        setError(true);
+        setError("Name is required.");
       }
     };
 
@@ -33,7 +33,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> =
         alert(`Hello  ${name}`);
       }
 
-      setError(true);
+      setError("Name is required.");
     };
 
     const totalUsers = users.length;
