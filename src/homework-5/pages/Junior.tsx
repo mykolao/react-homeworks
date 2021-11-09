@@ -1,5 +1,5 @@
 const Junior = () => {
-  return <div className="junior">Junior Page</div>;
+  return <div className="section_title">Junior Page</div>;
 };
 
 export default Junior;
