@@ -6,8 +6,13 @@ function HW5() {
   return (
     <div>
       <HashRouter>
-        <Header />
-        <Routes />
+        <div className="homework">
+          <h2 className="section_title">Homework 5</h2>
+
+          <Header />
+          <hr />
+          <Routes />
+        </div>
       </HashRouter>
     </div>
   );
