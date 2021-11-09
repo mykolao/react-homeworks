@@ -1,8 +1,8 @@
-import React from 'react'
 
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
-    // add paths
+    JUNIOR: "/junior",
+    JUNIOR_PLUS: "/junior_plus"
 }
 
 function Routes() {
