@@ -1,5 +1,5 @@
 const JuniorPlus = () => {
-  return <div className="junior-plus"></div>;
+  return <div className="junior-plus">Junior+ Page</div>;
 };
 
 export default JuniorPlus;
