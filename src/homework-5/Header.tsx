@@ -1,12 +1,5 @@
-import React from 'react'
-
 function Header() {
-    return (
-        <div>
-            // add NavLinks
-
-        </div>
-    )
+  return <div>Nav</div>;
 }
 
-export default Header
+export default Header;

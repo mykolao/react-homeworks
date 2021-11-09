@@ -1,18 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import HW1 from "./homework-1/HW1";
-import HW2 from "./homework-2/HW2";
-import HW3 from "./homework-3/HW3";
-import HW4 from "./homework-4/HW4";
+import HW5 from "./homework-5/HW5";
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <HW1 />
-      <HW2 />
-      <HW3 />
-      <HW4 />
+      <HW5 />
     </div>
   </React.StrictMode>,
   document.getElementById("root")
