@@ -6,6 +6,8 @@ import {
   saveState,
 } from "./localStorage/localStorage";
 
+import css from "./HW6.module.css";
+
 function HW6() {
   const [value, setValue] = useState<string>("");
 
@@ -19,7 +21,7 @@ function HW6() {
   return (
     <div className="homework">
       <h2 className="section_title">Homework 6</h2>
-      <div>
+      <div className={css.body}>
         <SuperEditableSpan
           value={value}
           onChangeText={setValue}
@@ -27,9 +29,11 @@ function HW6() {
             children: value ? undefined : "enter text...",
           }}
         />
+        <div className={css.buttons}>
+          <SuperButton onClick={save}>Save</SuperButton>
+          <SuperButton onClick={restore}>Restore</SuperButton>
+        </div>
       </div>
-      <SuperButton onClick={save}>save</SuperButton>
-      <SuperButton onClick={restore}>restore</SuperButton>
       <hr />
     </div>
   );
