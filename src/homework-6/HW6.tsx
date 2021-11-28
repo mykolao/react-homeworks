@@ -17,9 +17,8 @@ function HW6() {
   };
 
   return (
-    <div>
-      <hr />
-      homeworks 6{/*should work (должно работать)*/}
+    <div className="homework">
+      <h2 className="section_title">Homework 6</h2>
       <div>
         <SuperEditableSpan
           value={value}
@@ -31,9 +30,6 @@ function HW6() {
       </div>
       <SuperButton onClick={save}>save</SuperButton>
       <SuperButton onClick={restore}>restore</SuperButton>
-      <hr />
-      {/*для личного творчества, могу проверить*/}
-      {/*<AlternativeSuperEditableSpan/>*/}
       <hr />
     </div>
   );
