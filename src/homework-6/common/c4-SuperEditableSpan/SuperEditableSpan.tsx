@@ -6,6 +6,8 @@ import React, {
 } from "react";
 import SuperInputText from "../../../homework-4/common/c1-SuperInputText/SuperInputText";
 
+import css from "../../HW6.module.css";
+
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
@@ -65,7 +67,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
     onDoubleClick && onDoubleClick(e);
   };
 
-  const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+  const spanClassName = `${css.span} ${className}`;
 
   return (
     <>
@@ -83,7 +85,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
           {...restSpanProps}
         >
           {/*если нет захардкодженного текста для спана, то значение инпута*/}
-          {children || restProps.value}
+          ✏️ {children || restProps.value}
         </span>
       )}
     </>

@@ -5,6 +5,10 @@
 .buttons {
   margin: 12px 0 0 0;
   display: flex;
-
   gap: 8px;
+}
+
+.span {
+  color: var(--color-blue);
+  font-size: 1.15rem;
 }
