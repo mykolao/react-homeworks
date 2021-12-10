@@ -1,0 +1,19 @@
+.radio {
+  margin: 12px;
+}
+
+.input {
+  color: var(--color-light);
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  padding-left: 3px;
+  font-size: 1.1rem;
+}
+
+.selected {
+  color: var(--color-blue);
+}
