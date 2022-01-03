@@ -30,7 +30,6 @@ export const homeWorkReducer = (
   state: UserType[],
   action: Action
 ): UserType[] => {
-  // need to fix any
   switch (action.type) {
     case "sort": {
       const newState = [...state];

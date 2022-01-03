@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import SuperButton from "../homework-4/common/c2-SuperButton/SuperButton";
-import { homeWorkReducer } from "./bll/homeWorkReducer";
+import {
+  homeWorkReducer,
+  sortUp as sortUpAC,
+  sortDown as sortDownAC,
+  checkAge as checkAgeAC,
+} from "./bll/homeWorkReducer";
 
 export type UserType = {
   _id: number;
@@ -18,34 +23,36 @@ const initialPeople: UserType[] = [
 ];
 
 function HW8() {
-  const [people, setPeople] = useState<any>(initialPeople); // need to fix any
+  const [people, setPeople] =
+    useState<UserType[]>(initialPeople);
 
-  // need to fix any
-  const finalPeople = people.map((p: any) => (
-    <div key={p._id}>some name, age</div>
+  const finalPeople = people.map((p: UserType) => (
+    <div className="user" key={p._id}>
+      <div className="name">{p.name}</div>
+      <div className="age">{p.age}</div>
+    </div>
   ));
 
   const sortUp = () =>
-    setPeople(
-      homeWorkReducer(initialPeople, {
-        type: "sort",
-        payload: "up",
-      })
-    );
+    setPeople(homeWorkReducer(initialPeople, sortUpAC()));
+
+  const sortDown = () =>
+    setPeople(homeWorkReducer(initialPeople, sortDownAC()));
+
+  const checkAge = () =>
+    setPeople(homeWorkReducer(initialPeople, checkAgeAC(18)));
 
   return (
     <div className="homework">
       <h2 className="section_title">Homework 8</h2>
-      homeworks 8{/*should work (должно работать)*/}
       {finalPeople}
-      <div>
-        <SuperButton onClick={sortUp}>sort up</SuperButton>
+      <div className="filter_bar">
+        <SuperButton onClick={sortUp}>Sort Up</SuperButton>
+        <SuperButton onClick={sortDown}>Sort Down</SuperButton>
+        <SuperButton onClick={checkAge}>Check 18</SuperButton>
       </div>
       <div>sort down</div>
       check 18
-      <hr />
-      {/*для личного творчества, могу проверить*/}
-      {/*<AlternativePeople/>*/}
       <hr />
     </div>
   );
