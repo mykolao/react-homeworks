@@ -21,17 +21,23 @@ test("sort name up", () => {
   });
 
   console.log(newState);
-  // expect(...).toBe(...)
+  expect(newState[0]).toBe(initialState[1]);
 });
+
 test("sort name down", () => {
   const newState = homeWorkReducer(initialState, {
     type: "sort",
     payload: "down",
   });
+
+  expect(newState[0]).toBe(initialState[2]);
 });
+
 test("check age 18", () => {
   const newState = homeWorkReducer(initialState, {
     type: "check",
     payload: 18,
   });
+
+  expect(newState.length).toBe(4);
 });
