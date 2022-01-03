@@ -33,7 +33,6 @@ export const homeWorkReducer = (
   // need to fix any
   switch (action.type) {
     case "sort": {
-      // need to fix
       const newState = [...state];
       return action.payload === "up"
         ? newState.sort((a, b) => a.name.localeCompare(b.name))

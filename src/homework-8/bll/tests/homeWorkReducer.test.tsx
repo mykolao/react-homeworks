@@ -24,14 +24,13 @@ test("sort name up", () => {
   expect(newState[0]._id).toBe(initialState[1]._id);
 });
 
-// test("sort name down", () => {
-//   const newState = homeWorkReducer(initialState, sortDown());
+test("sort name down", () => {
+  const newState = homeWorkReducer(initialState, sortDown());
+  expect(newState[4]._id).toBe(initialState[3]._id);
+});
 
-//   expect(newState[0]).toBe(initialState[2]);
-// });
+test("check age 18", () => {
+  const newState = homeWorkReducer(initialState, checkAge(18));
 
-// test("check age 18", () => {
-//   const newState = homeWorkReducer(initialState, checkAge(18));
-
-//   expect(newState.length).toBe(4);
-// });
+  expect(newState.length).toBe(4);
+});
