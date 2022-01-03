@@ -7,6 +7,8 @@ import {
   checkAge as checkAgeAC,
 } from "./bll/homeWorkReducer";
 
+import styles from "./HW8.module.css";
+
 export type UserType = {
   _id: number;
   name: string;
@@ -27,9 +29,9 @@ function HW8() {
     useState<UserType[]>(initialPeople);
 
   const finalPeople = people.map((p: UserType) => (
-    <div className="user" key={p._id}>
-      <div className="name">{p.name}</div>
-      <div className="age">{p.age}</div>
+    <div className={styles.user} key={p._id}>
+      <div className={styles.name}>{p.name}</div>
+      <div className={styles.age}>{p.age}</div>
     </div>
   ));
 
@@ -45,14 +47,12 @@ function HW8() {
   return (
     <div className="homework">
       <h2 className="section_title">Homework 8</h2>
-      {finalPeople}
-      <div className="filter_bar">
+      <div className={styles.users}>{finalPeople}</div>
+      <div className={styles.filters}>
         <SuperButton onClick={sortUp}>Sort Up</SuperButton>
         <SuperButton onClick={sortDown}>Sort Down</SuperButton>
         <SuperButton onClick={checkAge}>Check 18</SuperButton>
       </div>
-      <div>sort down</div>
-      check 18
       <hr />
     </div>
   );

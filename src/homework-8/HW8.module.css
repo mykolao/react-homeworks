@@ -1,0 +1,24 @@
+.users {
+  margin: 12px;
+  max-width: 160px;
+}
+
+.user {
+  color: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  color: var(--color-blue);
+}
+
+.age {
+  color: var(--color-red);
+}
+
+.filters {
+  margin: 12px;
+  display: flex;
+  gap: 4px;
+}
