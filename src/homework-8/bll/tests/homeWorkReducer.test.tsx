@@ -1,6 +1,7 @@
+import { UserType } from "../../HW8";
 import { homeWorkReducer } from "../homeWorkReducer";
 
-let initialState: any[]; // need to fix any
+let initialState: UserType[];
 
 beforeEach(() => {
   initialState = [
