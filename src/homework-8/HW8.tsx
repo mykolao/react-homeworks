@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import SuperButton from "../homework-4/common/c2-SuperButton/SuperButton";
 import { homeWorkReducer } from "./bll/homeWorkReducer";
 
-// export type UserType =
+export type UserType = {
+  _id: number;
+  name: string;
+  age: number;
+};
 
-const initialPeople = [
+const initialPeople: UserType[] = [
   { _id: 0, name: "Кот", age: 3 },
   { _id: 1, name: "Александр", age: 66 },
   { _id: 2, name: "Коля", age: 16 },
