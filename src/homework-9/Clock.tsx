@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import SuperButton from "../homework-4/common/c2-SuperButton/SuperButton";
 
+// Utils
 const formatTime = (date: Date): string => {
   let hh = String(date.getHours());
   let mm = String(date.getMinutes());
@@ -16,7 +17,7 @@ const formatTime = (date: Date): string => {
 const formatDate = (date: Date): string => {
   let yy = String(date.getFullYear());
   let mm = String(date.getMonth() + 1);
-  let dd = String(date.getDay() + 1);
+  let dd = String(date.getDay() + 2);
 
   mm = +mm < 10 ? `0${mm}` : mm;
   dd = +dd < 10 ? `0${dd}` : dd;
@@ -24,9 +25,31 @@ const formatDate = (date: Date): string => {
   return `${yy}:${mm}:${dd}`;
 };
 
+// Styles
+const clockStyle: CSSProperties = {
+  margin: "12px",
+};
+
+const timeStyle: CSSProperties = {
+  fontSize: "1.2rem",
+  fontWeight: "bold",
+  letterSpacing: "1px",
+  color: "var(--color-blue)",
+  paddingBottom: "2px",
+};
+
+const dateStyle = { ...timeStyle, color: "var(--color-red)" };
+
+const buttonsStyle: CSSProperties = {
+  display: "flex",
+  gap: "4px",
+  marginTop: "8px",
+};
+
 function Clock() {
   const [timerId, setTimerId] = useState<number>(0);
   const [date, setDate] = useState<Date>();
+  const [defaultDate] = useState(new Date());
   const [show, setShow] = useState<boolean>(false);
 
   const stop = () => {
@@ -49,25 +72,27 @@ function Clock() {
 
   const stringTime = date
     ? formatTime(date)
-    : formatTime(new Date());
+    : formatTime(defaultDate);
 
   const stringDate = date
     ? formatDate(date)
-    : formatDate(new Date());
+    : formatDate(defaultDate);
 
   return (
-    <div>
+    <div style={clockStyle}>
       <div
+        style={timeStyle}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
         {stringTime}
       </div>
 
-      {show && <div>{stringDate}</div>}
-
-      <SuperButton onClick={start}>Start</SuperButton>
-      <SuperButton onClick={stop}>Stop</SuperButton>
+      {show && <div style={dateStyle}>{stringDate}</div>}
+      <div style={buttonsStyle}>
+        <SuperButton onClick={start}>Start</SuperButton>
+        <SuperButton onClick={stop}>Stop</SuperButton>
+      </div>
     </div>
   );
 }
