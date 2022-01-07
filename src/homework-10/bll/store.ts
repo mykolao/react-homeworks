@@ -1,15 +1,5 @@
-import { loadingReducer } from "./loadingReducer";
+import { createStore } from "redux";
+import { loadingReducer as loading } from "./loadingReducer";
 
-// const reducers = combineReducers({
-//     loading: loadingReducer,
-//
-// })
-//
-// const store = createStore(reducers)
-//
-// export default store
-//
-// export type AppStoreType = ReturnType<typeof reducers>
-//
-// // @ts-ignore
-// window.store = store // for dev
+const store = createStore(loading);
+export default store;

@@ -1,4 +1,4 @@
-type State = typeof initState;
+export type State = typeof initState;
 type Action = ReturnType<typeof toggleLoading>;
 
 const initState = {
