@@ -10,28 +10,33 @@ function HW11() {
     setValue1(r);
   };
 
+  const onChangeDoubleRangeHandler = ([low, high]: [
+    number,
+    number
+  ]) => {
+    if (low !== value1) setValue1(low);
+    else setValue2(high);
+  };
+
   return (
     <div className="homework">
       <h2 className="section_title">Homework 11</h2>
 
       <div>
-        <span>{value1}</span>
         <SuperRange
-          value={value1}
           onChangeRange={onChangeRangeHandler}
+          value={value1}
         />
-      </div>
-      {/* <div>
         <span>{value1}</span>
+      </div>
         <SuperDoubleRange
-        // сделать так чтоб value1 и value2 изменялось
+          onChangeRange={onChangeDoubleRangeHandler}
+          values={[value1, value2]}
         />
+      <div>
+        <span>{value1}</span>
         <span>{value2}</span>
-      </div> */}
-      <hr />
-      {/*для личного творчества, могу проверить*/}
-      {/*<AlternativeSuperRange/>*/}
-      {/*<AlternativeSuperDoubleRange/>*/}
+      </div>
       <hr />
     </div>
   );
