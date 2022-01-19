@@ -3,6 +3,8 @@ import SuperButton from "../../homework-4/common/c2-SuperButton/SuperButton";
 import SuperCheckbox from "../../homework-4/common/c3-SuperCheckbox/SuperCheckbox";
 import API from "../dal/RequestsAPI";
 
+import styles from "./Request.module.css";
+
 const Request = () => {
   const [checked, setChecked] = React.useState(false);
   const [status, setStatus] = React.useState({
@@ -37,7 +39,7 @@ const Request = () => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <SuperButton onClick={onButtonClickHandler}>
         Button
       </SuperButton>
@@ -47,9 +49,13 @@ const Request = () => {
       >
         Success
       </SuperCheckbox>
-      {status.success && <div>{status.value}</div>}
-      {status.error && <div>{status.value}</div>}
-    </>
+      {status.success && (
+        <div className={styles.success}>{status.value}</div>
+      )}
+      {status.error && (
+        <div className={styles.error}>{status.value}</div>
+      )}
+    </div>
   );
 };
 

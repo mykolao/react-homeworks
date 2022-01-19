@@ -1,0 +1,16 @@
+.container {
+  margin: 12px;
+  font-size: 1.2rem;
+}
+
+.container button {
+  margin-right: 12px;
+}
+
+.success {
+  color: var(--color-blue);
+}
+
+.error {
+  color: var(--color-red);
+}
