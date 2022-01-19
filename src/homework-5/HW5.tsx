@@ -7,7 +7,7 @@ function HW5() {
     <div>
       <HashRouter>
         <div className="homework">
-          <h2 className="section_title">Homework 5</h2>
+          <h2 className="section_title">REACT HOMEWORKS</h2>
 
           <Header />
           <hr />
