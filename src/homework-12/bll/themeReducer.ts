@@ -1,6 +1,6 @@
 export type Theme = "light" | "dark" | "red";
 
-const initState: Theme = "light";
+const initState: Theme = "red";
 
 export const themeReducer = (
   state = initState,

@@ -15,13 +15,14 @@ function HW12() {
   // useDispatch, onChangeCallback
 
   return (
-    <div className={s[theme]}>
-      <hr />
-      <span className={s[theme + "-text"]}>homeworks 12</span>
+    <div className="homework">
+      <h2 className="section_title">Homework 12</h2>
+      <div className={`${s[theme]} ${s.container}`}>
+        <span className={s[theme + "-text"]}>Hello 12</span>
 
-      {/*should work (должно работать)*/}
-      {/*SuperSelect or SuperRadio*/}
-
+        {/*should work (должно работать)*/}
+        {/*SuperSelect or SuperRadio*/}
+      </div>
       <hr />
     </div>
   );

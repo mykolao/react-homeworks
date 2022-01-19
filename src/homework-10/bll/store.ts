@@ -10,5 +10,4 @@ const reducers = combineReducers({
 export type RootState = ReturnType<typeof reducers>;
 
 const store = createStore(reducers);
-console.log(store.getState());
 export default store;
