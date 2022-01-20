@@ -2,7 +2,8 @@ import React from "react";
 import { CSSProperties } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SuperButton from "../homework-4/common/c2-SuperButton/SuperButton";
-import { State, toggleLoading } from "./bll/loadingReducer";
+import { toggleLoading } from "./bll/loadingReducer";
+import { RootState } from "./bll/store";
 
 const Spinner = () => {
   const [rotationAngle, setRotationAngle] = React.useState(1);
@@ -47,8 +48,8 @@ const Spinner = () => {
 
 function HW10() {
   const dispatch = useDispatch();
-  const loading = useSelector<State, boolean>(
-    (state) => state.loading
+  const loading = useSelector<RootState, boolean>(
+    (state) => state.loading.loading
   );
 
   const setLoading = () => {
